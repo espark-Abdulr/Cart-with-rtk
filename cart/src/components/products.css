@@ -1,0 +1,40 @@
+.card img {
+  height: 70% !important;
+}
+.card {
+  height: 450px !important;
+}
+.cart-left {
+  width: 70%;
+  min-height: 400px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  background-color: #5f9ea0;
+  color: white;
+  border-radius: 10px;
+  -webkit-box-shadow: -2px 0px 7px 5px rgba(133, 130, 133, 0.51);
+  -moz-box-shadow: -2px 0px 7px 5px rgba(133, 130, 133, 0.51);
+  box-shadow: -2px 0px 7px 5px rgba(133, 130, 133, 0.51);
+}
+.cart-right {
+  width: 25%;
+  max-height: 250px;
+  border: 1px solid green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.single-item {
+  display: flex;
+  height: 200px;
+  align-items: center;
+  justify-content: space-around;
+  background-color: grey;
+  border-radius: 8px;
+}
+.single-item img {
+  height: 70%;
+}
