@@ -75,7 +75,15 @@ export const cartSlice = createSlice({
       }
     },
     register: (state, action) => {
-      state.users.push(action.payload);
+      const filter = state.users.filter(
+        (item) => item.email === action.payload.email
+      );
+      if (filter.length === 0) {
+        state.users.push(action.payload);
+      }
+      else{
+        alert("Email already registered")
+      }
     },
     login: (state, action) => {
       const filter = state.users.filter(

@@ -67,6 +67,7 @@ function Products() {
           {items.map((eachProduct, index) => (
             <Card
               style={{ minWidth: "30%", marginBottom: index === 4 ? 20 : 0 }}
+              key={index}
             >
               <Card.Img variant="top" src={eachProduct.img} />
               <Card.Body>

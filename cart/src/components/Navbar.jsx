@@ -24,7 +24,7 @@ function Navbar333() {
             style={{ maxHeight: "100px" }}
             navbarScroll
           >
-            <Nav.Link href="#action1">Home</Nav.Link>
+            <Nav.Link href="#action1"></Nav.Link>
           </Nav>
 
           <NavLink to={"/cart"}>
