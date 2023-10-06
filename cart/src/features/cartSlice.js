@@ -6,6 +6,8 @@ const initialState = {
   items: productsData,
   totalQuantity: 0,
   totalPrice: 0,
+  users: [],
+  isLogin: false,
 };
 
 export const cartSlice = createSlice({
@@ -33,10 +35,7 @@ export const cartSlice = createSlice({
     getCartTotal: (state) => {
       let { totalQuantity, totalPrice } = state.cart.reduce(
         (cartTotal, cartItem) => {
-          console.log("carttotal", cartTotal);
-          console.log("cartitem", cartItem);
           const { price, quantity } = cartItem;
-          console.log(price, quantity);
           const itemTotal = price * quantity;
           cartTotal.totalPrice += itemTotal;
           cartTotal.totalQuantity += quantity;
@@ -61,8 +60,45 @@ export const cartSlice = createSlice({
         }
       }
     },
+    decrement: (state, action) => {
+      // console.log(action.payload);
+      for (var i = 0; i < state.cart.length; i++) {
+        if (state.cart[i].id === action.payload.id) {
+          if (state.cart[i].quantity === 1) {
+            state.cart = state.cart.filter(
+              (item) => item.id !== action.payload.id
+            );
+          } else {
+            state.cart[i].quantity = state.cart[i].quantity - 1;
+          }
+        }
+      }
+    },
+    register: (state, action) => {
+      state.users.push(action.payload);
+    },
+    login: (state, action) => {
+      const filter = state.users.filter(
+        (item) =>
+          item.email === action.payload.email &&
+          item.password === action.payload.password
+      );
+      if (filter.length > 0) {
+        state.isLogin = true;
+      } else {
+        state.isLogin = false;
+        alert("Invalid Email or Password");
+      }
+    },
   },
 });
-export const { addToCart, getCartTotal, deleteItem, increment } =
-  cartSlice.actions;
+export const {
+  addToCart,
+  getCartTotal,
+  deleteItem,
+  increment,
+  decrement,
+  register,
+  login,
+} = cartSlice.actions;
 export default cartSlice.reducer;
