@@ -1,0 +1,88 @@
+.main {
+  min-height: 94vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #8fc4b7;
+}
+.back {
+  height: 300px;
+  background-image: url("https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/img3.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
+  width: 45%;
+}
+form {
+  width: 45%;
+  height: auto;
+  background-color: rgb(255, 255, 255);
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+form input {
+  width: 95%;
+}
+
+.horizontal-inputs {
+  display: flex;
+  column-gap: 5px;
+  /* justify-content: space-between; */
+  row-gap: 10px;
+}
+.horizontal-inputs input {
+  width: 47%;
+}
+@media screen and (max-width: 575px) {
+  .horizontal-inputs input {
+    width: 95%;
+  }
+  .horizontal-inputs {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 767px) {
+  .back,
+  form {
+    width: 85%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .back,
+  form {
+    width: 65%;
+  }
+}
+@media screen and (min-width: 1500px) {
+  .back,
+  form {
+    width: 35%;
+  }
+}
+form input {
+  height: 40px !important;
+  border-radius: 4px;
+  outline: none;
+  border: 1px solid #8fc4b7;
+  padding: 3px;
+  transition: all 0.5s;
+}
+form input:focus{
+    border: 1px solid green;
+}
+form button {
+  height: 40px;
+  width: 95%;
+  background-color: green;
+  color: white;
+  border: none;
+  box-shadow: -1px 0px 3px 4px #f1e9e9;
+}
+/* #b9b9b9 */

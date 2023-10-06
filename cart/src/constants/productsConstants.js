@@ -29,9 +29,16 @@ export const productsData =  [
   },
   {
     id: 5,
-    title: "Apple i phone",
+    title: "Apple iphone",
     price: 4000.0,
     img: "https://www.91-img.com/gallery_images_uploads/3/d/3df5ca6a9b470f715b085991144a5b76e70da975.JPG?tr=h-550,w-0,c-at_max",
+    quantity: 1,
+  },
+  {
+    id: 6,
+    title: "Apple iphone 15",
+    price: 6000.0,
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6MkDHuFHEIXX86an2YrhHrgVXQ9B75be7lA&usqp=CAU",
     quantity: 1,
   },
 //   {
