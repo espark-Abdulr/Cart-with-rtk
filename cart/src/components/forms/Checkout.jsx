@@ -2,7 +2,7 @@ import React from "react";
 import "./Checkout.css";
 import { useDispatch } from "react-redux";
 import { checkouting } from "../../features/cartSlice";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const Checkout = () => {
   const dispatch = useDispatch();
@@ -11,11 +11,14 @@ const Checkout = () => {
     event.preventDefault();
     dispatch(checkouting());
     navigate("/products");
-    alert("Order Successful")
+    alert("Order Successful");
   };
   return (
     <div className="main">
       <form onSubmit={checkoutHandler}>
+        <NavLink to={"/cart"}>
+          <button className="back-button">Go Back</button>
+        </NavLink>
         <h2>Checkout Here</h2>
         <div className="horizontal-inputs">
           <input
