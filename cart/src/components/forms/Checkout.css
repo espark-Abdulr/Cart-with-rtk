@@ -1,0 +1,10 @@
+.main{
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main form{
+    height: auto;
+    border-radius: 8px;
+}

@@ -80,9 +80,8 @@ export const cartSlice = createSlice({
       );
       if (filter.length === 0) {
         state.users.push(action.payload);
-      }
-      else{
-        alert("Email already registered")
+      } else {
+        alert("Email already registered");
       }
     },
     login: (state, action) => {
@@ -98,6 +97,10 @@ export const cartSlice = createSlice({
         alert("Invalid Email or Password");
       }
     },
+    checkouting: (state) => {
+      state.cart.length = 0;
+      console.log("Checkouting");
+    },
   },
 });
 export const {
@@ -108,5 +111,6 @@ export const {
   decrement,
   register,
   login,
+  checkouting,
 } = cartSlice.actions;
 export default cartSlice.reducer;

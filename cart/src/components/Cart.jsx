@@ -46,7 +46,7 @@ const Cart = () => {
           <div className="cart-left">
             <h2>Cart Items</h2>
             {cart.map((eachItem, index) => (
-              <div className="single-item">
+              <div className="single-item" key={index}>
                 <img src={eachItem.img} alt="Product" />
                 <div className="item-details">
                   <h3>{eachItem.title}</h3>
@@ -88,6 +88,12 @@ const Cart = () => {
             <NavLink to={"/"}>
               <Button variant="primary" style={{ marginLeft: "10px" }}>
                 Continue Shopping
+              </Button>
+            </NavLink>
+            <br />
+            <NavLink to={"/checkout"}>
+              <Button variant="primary" style={{ marginLeft: "10px" }}>
+                Proceed to checkout
               </Button>
             </NavLink>
           </div>

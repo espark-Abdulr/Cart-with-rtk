@@ -10,6 +10,7 @@ import Signin from "./components/forms/Signin";
 import Signup from "./components/forms/Signup";
 import { useSelector } from "react-redux";
 import Cart from "./components/Cart";
+import Checkout from "./components/forms/Checkout";
 
 function App() {
   const isLogin = useSelector((c) => {
@@ -30,6 +31,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Products />}></Route>
           <Route path="/products" element={<Products />}></Route>
+          <Route path="/checkout" element={<Checkout />}></Route>
           <Route path="/login" element={<Signin />}></Route>
           <Route path="/register" element={<Signup />}></Route>
           <Route path="/cart" element={<Cart />}></Route>
